@@ -3,8 +3,13 @@
 This is a package to make your folder clear and structured. 
 You just need to install this package with command:
 ```
-pip install clean_folder_diamond
+https://test.pypi.org/project/clean-folder-superb/0.0.1/
 ```
+or from folder with setup.py file:
+```
+python setup.py install
+```
+
 And then run it with one argument:
 ```
 clean_folder <source>
