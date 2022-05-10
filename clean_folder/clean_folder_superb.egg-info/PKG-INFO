@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: clean-folder-superb
+Version: 0.0.1
+Summary: Package to clean your folders
+Home-page: https://github.com/nataliia-pysanka/clean_folder_superb
+Author: Nataliia Pysanka
+Author-email: pysankanataliia@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Clean_folder
+
+This is a package to make your folder clear and structured. 
+You just need to install this package with command:
+```
+pip install clean_folder_diamond
+```
+And then run it with one argument:
+```
+clean_folder <source>
+```
+
+All files from source folder will be sorted by their extensions to the next folders created inside source folder:
+- images ('JPEG', 'PNG', 'JPG', 'SVG');
+- video ('AVI', 'MP4', 'MOV', 'MKV');
+- documents ('DOC', 'DOCX', 'TXT', 'PDF', 'XLSX', 'PPTX');
+- audio ('MP3', 'OGG', 'WAV', 'AMR');
+- archives ('ZIP', 'GZ', 'TAR');
+- other
+
+All filenames will be normalized: cyrillic symbols are transliterated and symbols except latin alphabet and  numbers are change by symbol '_'.
+
+

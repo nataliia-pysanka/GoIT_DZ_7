@@ -38,3 +38,6 @@ $RECYCLE.BIN/
 # pytest
 pytest-env
 .pytest_cache
+
+#pypi
+.pypirc

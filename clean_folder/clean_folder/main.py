@@ -7,8 +7,8 @@ python sort.py /user/Desktop/Хлам
 import sys
 from shutil import unpack_archive
 from pathlib import Path
-import parsing as parser
-from normalization import normalize
+import clean_folder.parsing as parser
+from clean_folder.normalization import normalize
 
 
 def handle_files(file_name: Path, target_folder: Path):
@@ -36,7 +36,7 @@ def handle_folder(file_name: Path):
     file_name.rmdir()
 
 
-def main(folder: Path):
+def scan(folder: Path):
     parser.scan_folder(folder)
     for file in parser.IMAGES:
         handle_files(file, folder / 'images')
@@ -55,10 +55,14 @@ def main(folder: Path):
     parser.print_lst()
 
 
-if __name__ == '__main__':
-    if sys.argv[1]:
+def main():
+    try:
         folder_for_scan = Path(sys.argv[1])
         print(f'Work with "{folder_for_scan}" folder...')
-        main(folder_for_scan.resolve())
-    else:
+        scan(folder_for_scan.resolve())
+    except IndexError:
         print('Not enough arguments')
+
+
+if __name__ == '__main__':
+    main()
